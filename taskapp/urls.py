@@ -10,7 +10,6 @@ from django.conf.urls import url
 from .views import FileView
 urlpatterns = [
     url(r'^upload/$', FileView.as_view(), name='file-upload'),
-    url(r'^view/$', ImageList.as_view()),
-    url(r'^detail/$', ImageDetail.as_view()),
-
+    url(r'^view', ImageList.as_view()),
+    url(r'^detail/<int:pk>', ImageDetail.as_view()),
 ]

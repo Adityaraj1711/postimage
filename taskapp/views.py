@@ -1,6 +1,5 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics
-from .serializers import *
 from .models import *
 from rest_framework.views import APIView
 from rest_framework.parsers import MultiPartParser, FormParser
@@ -25,6 +24,6 @@ class ImageDetail(generics.RetrieveUpdateDestroyAPIView):
 class ImageList(generics.ListCreateAPIView):
     serializer_class = FileSerializer
     queryset = File.objects.all()
-    filter_backends = (DjangoFilterBackend,)
-    filter_fields = '__all__'
+    #filter_fields = '__all__'
+    #filter_backends = (DjangoFilterBackend,)
 

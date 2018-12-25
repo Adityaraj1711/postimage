@@ -6,3 +6,6 @@ class File(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
     user = models.CharField(max_length=2,default='p')
     userid = models.IntegerField(default=1)
+
+    def __str__(self):
+        return str(self.userid)
