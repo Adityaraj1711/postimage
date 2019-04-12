@@ -11,3 +11,5 @@ The app is intended to store all the images and file related fields.
 For accessing images and other database services, it uses API's for making connections easier.
 </strong>
 </p>
+
+blob type is used 
